@@ -1,0 +1,40 @@
+Social Media Marketing Campaign for Flavoro
+Executed a targeted campaign by analyzing social media metrics, resulting in increased online
+engagement and enhanced brand visibility.
+Developed data-driven content strategies that improved audience retention and provided measurable
+improvements in campaign performance.
+Market Research for Novatech
+Conducted comprehensive market research and utilized analytical tools to identify emerging customer
+trends, directly informing product launch strategies.
+Synthesized complex market data into actionable insights, driving strategic recommendations for
+improved product positioning.
+COVID-19 Data Insights: Python Analysis Project
+ Github
+Achievements: Analyzed COVID-19 datasets using Python to uncover critical trends in infection,
+recovery, and fatality rates, thereby transforming raw public health data into actionable insights.
+T ech Used: Python, Pandas, NumPy, Matplotlib, Seaborn
+Diwali Sales Performance Analysis: Python-Driven Insights
+ Github
+Achievements: Processed and visualized Diwali seasonal sales data to identify peak periods and product
+performance trends, supporting optimized marketing strategies.
+T ech Used: Python, Pandas, Matplotlib, Seaborn
+Food Delivery Operational Analytics: SQL Project
+ Github
+Achievements: Employed advanced SQL queries to extract and aggregate food delivery data, resulting
+in the identification of operational bottlenecks and improved logistic efficiencies.
+T ech Used: SQL (MySQL/PostgreSQL)
+Fundamental Data Analysis & Visualization with Python
+ Github
+Achievements: Demonstrated key data analysis techniques by cleaning, transforming, and visualizing
+datasets, establishing a robust foundation for data-driven decision-making.
+T ech Used: Python, Pandas, NumPy, Matplotlib, Seaborn
+NYC Airbnb Market Insights: Integrated SQL & Python Analysis
+ Github
+Achievements: Combined SQL and Python to analyze rental pricing trends and neighborhood
+performance in NYC, resulting in comprehensive market segmentation insights for strategic planning.
+T ech Used: SQL, Python, Pandas, NumPy, Matplotlib, Seaborn
+Sales Data Performance Analysis: SQL & Python Integrated Analytics
+ Github
+Achievements: Integrated SQL -driven data extraction with Python analysis to evaluate seasonal sales
+trends and product performance, delivering actionable insights that support strategic planning.
+T ech Used: SQL, Python, Pandas, NumPy, Matplotlib, Seaborn
