@@ -1,8 +1,10 @@
+import AnimatedSectionTitle from "./AnimatedSectionTitle";
+
 export default function ExperienceSection() {
   return (
     <section id="experience" className="py-16 bg-gray-50 section-fade">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 font-accent">Experience</h2>
+        <AnimatedSectionTitle title="Experience" colorScheme="amber" />
         
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-xl shadow-md p-8 relative">

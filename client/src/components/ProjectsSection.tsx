@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import AnimatedSectionTitle from "./AnimatedSectionTitle";
 
 export default function ProjectsSection() {
   const projects = [
@@ -105,15 +106,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-16 bg-white section-fade">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-4 font-accent"
-        >
-          Projects
-        </motion.h2>
+        <AnimatedSectionTitle title="Projects" colorScheme="purple" />
         <motion.p 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
