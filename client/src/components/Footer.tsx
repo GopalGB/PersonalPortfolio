@@ -1,32 +1,129 @@
 import { scrollToSection } from "@/lib/utils";
-import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
-    <footer className="py-8 bg-neutral text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold mb-2">
-            <span className="text-primary">Neha</span> Bagaswar
+    <footer style={{ 
+      background: "#1e293b", 
+      color: "white", 
+      padding: "40px 0",
+      marginTop: "20px"
+    }}>
+      <div style={{ 
+        maxWidth: "1200px", 
+        margin: "0 auto", 
+        padding: "0 20px" 
+      }}>
+        <div style={{ 
+          textAlign: "center", 
+          marginBottom: "30px" 
+        }}>
+          <h3 style={{ 
+            fontSize: "24px", 
+            fontWeight: "bold", 
+            marginBottom: "8px" 
+          }}>
+            <span style={{ color: "#5FA8D3" }}>Neha</span> Bagaswar
           </h3>
-          <p className="text-gray-300">
+          <p style={{ color: "#cbd5e1" }}>
             Business & Data Analyst
           </p>
         </div>
         
-        <div className="flex justify-center gap-8 mb-8 flex-wrap">
-          <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-primary">About</button>
-          <button onClick={() => scrollToSection('skills')} className="text-gray-300 hover:text-primary">Skills</button>
-          <button onClick={() => scrollToSection('projects')} className="text-gray-300 hover:text-primary">Projects</button>
-          <button onClick={() => scrollToSection('experience')} className="text-gray-300 hover:text-primary">Experience</button>
-          <button onClick={() => scrollToSection('contact')} className="text-gray-300 hover:text-primary">Contact</button>
+        <div style={{ 
+          display: "flex", 
+          justifyContent: "center", 
+          gap: "30px", 
+          marginBottom: "30px",
+          flexWrap: "wrap"
+        }}>
+          <button 
+            onClick={() => scrollToSection('about')} 
+            style={{ 
+              background: "transparent", 
+              border: "none", 
+              color: "#cbd5e1", 
+              cursor: "pointer" 
+            }}
+            onMouseOver={(e) => e.currentTarget.style.color = "#5FA8D3"}
+            onMouseOut={(e) => e.currentTarget.style.color = "#cbd5e1"}
+          >
+            About
+          </button>
+          <button 
+            onClick={() => scrollToSection('skills')} 
+            style={{ 
+              background: "transparent", 
+              border: "none", 
+              color: "#cbd5e1", 
+              cursor: "pointer" 
+            }}
+            onMouseOver={(e) => e.currentTarget.style.color = "#5FA8D3"}
+            onMouseOut={(e) => e.currentTarget.style.color = "#cbd5e1"}
+          >
+            Skills
+          </button>
+          <button 
+            onClick={() => scrollToSection('projects')} 
+            style={{ 
+              background: "transparent", 
+              border: "none", 
+              color: "#cbd5e1", 
+              cursor: "pointer" 
+            }}
+            onMouseOver={(e) => e.currentTarget.style.color = "#5FA8D3"}
+            onMouseOut={(e) => e.currentTarget.style.color = "#cbd5e1"}
+          >
+            Projects
+          </button>
+          <button 
+            onClick={() => scrollToSection('experience')} 
+            style={{ 
+              background: "transparent", 
+              border: "none", 
+              color: "#cbd5e1", 
+              cursor: "pointer" 
+            }}
+            onMouseOver={(e) => e.currentTarget.style.color = "#5FA8D3"}
+            onMouseOut={(e) => e.currentTarget.style.color = "#cbd5e1"}
+          >
+            Experience
+          </button>
+          <button 
+            onClick={() => scrollToSection('contact')} 
+            style={{ 
+              background: "transparent", 
+              border: "none", 
+              color: "#cbd5e1", 
+              cursor: "pointer" 
+            }}
+            onMouseOver={(e) => e.currentTarget.style.color = "#5FA8D3"}
+            onMouseOut={(e) => e.currentTarget.style.color = "#cbd5e1"}
+          >
+            Contact
+          </button>
         </div>
         
-        <div className="flex justify-center space-x-6 mb-8">
+        <div style={{ 
+          display: "flex", 
+          justifyContent: "center", 
+          gap: "24px", 
+          marginBottom: "30px" 
+        }}>
           <a 
             href="mailto:nehabagaswar28@gmail.com" 
-            className="w-10 h-10 rounded-full bg-gray-700 hover:bg-blue-500 flex items-center justify-center text-white"
-            aria-label="Email"
+            style={{ 
+              width: "40px", 
+              height: "40px", 
+              borderRadius: "50%", 
+              backgroundColor: "#374151", 
+              display: "flex", 
+              alignItems: "center", 
+              justifyContent: "center", 
+              color: "white",
+              textDecoration: "none"
+            }}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = "#3b82f6"}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = "#374151"}
           >
             <i className="fas fa-envelope"></i>
           </a>
@@ -34,8 +131,19 @@ export default function Footer() {
             href="https://www.linkedin.com/in/neha-bagaswar" 
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-full bg-gray-700 hover:bg-blue-700 flex items-center justify-center text-white"
-            aria-label="LinkedIn"
+            style={{ 
+              width: "40px", 
+              height: "40px", 
+              borderRadius: "50%", 
+              backgroundColor: "#374151", 
+              display: "flex", 
+              alignItems: "center", 
+              justifyContent: "center", 
+              color: "white",
+              textDecoration: "none"
+            }}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = "#0077b5"}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = "#374151"}
           >
             <i className="fab fa-linkedin-in"></i>
           </a>
@@ -43,25 +151,58 @@ export default function Footer() {
             href="https://github.com/nehabagaswar"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 rounded-full bg-gray-700 hover:bg-gray-900 flex items-center justify-center text-white"
-            aria-label="GitHub"
+            style={{ 
+              width: "40px", 
+              height: "40px", 
+              borderRadius: "50%", 
+              backgroundColor: "#374151", 
+              display: "flex", 
+              alignItems: "center", 
+              justifyContent: "center", 
+              color: "white",
+              textDecoration: "none"
+            }}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = "#1f2937"}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = "#374151"}
           >
             <i className="fab fa-github"></i>
           </a>
         </div>
         
-        <div className="text-center text-sm text-gray-400 border-t border-gray-700 pt-6">
+        <div style={{ 
+          textAlign: "center", 
+          fontSize: "14px", 
+          color: "#94a3b8", 
+          borderTop: "1px solid #334155", 
+          paddingTop: "24px" 
+        }}>
           <p>© 2025 Neha Bagaswar • All Rights Reserved</p>
-          <p className="mt-2 text-xs">Data-driven • Detail-oriented • Results-focused</p>
+          <p style={{ marginTop: "8px", fontSize: "12px" }}>Data-driven • Detail-oriented • Results-focused</p>
         </div>
         
-        <div className="flex justify-center mt-6">
+        <div style={{ 
+          display: "flex", 
+          justifyContent: "center", 
+          marginTop: "24px" 
+        }}>
           <button
             onClick={() => scrollToSection('hero')}
-            className="bg-primary hover:bg-primary/90 h-10 w-10 rounded-full flex items-center justify-center shadow-md"
-            aria-label="Back to top"
+            style={{ 
+              backgroundColor: "#5FA8D3", 
+              height: "40px", 
+              width: "40px", 
+              borderRadius: "50%", 
+              display: "flex", 
+              alignItems: "center", 
+              justifyContent: "center", 
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              border: "none",
+              cursor: "pointer"
+            }}
+            onMouseOver={(e) => e.currentTarget.style.backgroundColor = "#4a95c0"}
+            onMouseOut={(e) => e.currentTarget.style.backgroundColor = "#5FA8D3"}
           >
-            <i className="fas fa-arrow-up text-white"></i>
+            <i className="fas fa-arrow-up" style={{ color: "white" }}></i>
           </button>
         </div>
       </div>
