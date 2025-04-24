@@ -88,6 +88,27 @@ export default function TimelineSection() {
             }}
           />
           
+          {/* Decorative animated elements */}
+          <motion.div 
+            className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 rounded-full bg-primary/40"
+            style={{
+              y: useTransform(scrollYProgress, [0, 1], [50, window.innerHeight - 100]),
+              x: useTransform(scrollYProgress, [0, 0.5, 1], [-20, 20, -20]),
+              opacity: useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]),
+              scale: useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1.2, 0.8])
+            }}
+          />
+          
+          <motion.div 
+            className="absolute left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-secondary/60"
+            style={{
+              y: useTransform(scrollYProgress, [0, 1], [150, window.innerHeight - 200]),
+              x: useTransform(scrollYProgress, [0, 0.5, 1], [15, -15, 15]),
+              opacity: useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 0.7, 0.7, 0]),
+              scale: useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.6])
+            }}
+          />
+          
           {/* Timeline events */}
           <div className="relative z-10">
             {milestones.map((milestone, index) => {
@@ -148,8 +169,19 @@ export default function TimelineSection() {
                       {milestone.skills.map((skill, skillIndex) => (
                         <motion.span 
                           key={skillIndex}
-                          whileHover={{ scale: 1.1 }}
-                          className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs"
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          whileHover={{ 
+                            scale: 1.1, 
+                            backgroundColor: "rgb(var(--color-primary) / 0.1)",
+                            color: "rgb(var(--color-primary))" 
+                          }}
+                          viewport={{ once: true }}
+                          transition={{ 
+                            duration: 0.2, 
+                            delay: 0.4 + (skillIndex * 0.1) 
+                          }}
+                          className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs border border-gray-200 shadow-sm"
                         >
                           {skill}
                         </motion.span>

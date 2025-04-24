@@ -82,7 +82,7 @@ export default function Navbar() {
         className={`md:hidden bg-white shadow-md overflow-hidden`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          {["about", "skills", "projects", "experience", "education", "contact"].map((item) => (
+          {["about", "skills", "projects", "experience", "education", "timeline", "contact"].map((item) => (
             <motion.a 
               whileHover={{ x: 5 }}
               key={item}
