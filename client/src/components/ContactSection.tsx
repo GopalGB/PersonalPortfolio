@@ -1,20 +1,6 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 
 export default function ContactSection() {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-
   const contactInfo = [
     { 
       type: "Email", 
@@ -62,74 +48,6 @@ export default function ContactSection() {
     visible: {
       y: 0,
       opacity: 1
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Form validation
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      toast({
-        title: "Missing Information",
-        description: "Please fill in all the fields.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address.",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for reaching out. I'll get back to you soon!",
-          variant: "default"
-        });
-        // Reset form after successful submission
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: ""
-        });
-      } else {
-        const error = await response.json();
-        throw new Error(error.message || "Failed to send message");
-      }
-    } catch (error) {
-      toast({
-        title: "Something went wrong",
-        description: error instanceof Error ? error.message : "Failed to send message. Please try again later.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -209,97 +127,17 @@ export default function ContactSection() {
               ))}
             </div>
             
-            {/* Contact form */}
+            {/* Get In Touch Message */}
             <motion.div 
               variants={itemVariants}
-              className="mt-12 p-6 bg-gray-50 rounded-lg"
+              className="mt-12 p-6 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg text-center"
             >
-              <h3 className="text-xl font-semibold mb-6 text-center">Send me a message</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="block text-sm font-medium text-neutral">
-                      Your Name
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="John Doe"
-                      className="w-full"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="block text-sm font-medium text-neutral">
-                      Your Email
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="john.doe@example.com"
-                      className="w-full"
-                    />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="subject" className="block text-sm font-medium text-neutral">
-                    Subject
-                  </label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    type="text"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    placeholder="How can I help you?"
-                    className="w-full"
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-neutral">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="I'm interested in discussing a potential project..."
-                    className="w-full"
-                  />
-                </div>
-                
-                <div className="text-center">
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="px-8 py-6 h-auto bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-colors shadow-md"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <i className="fas fa-circle-notch fa-spin mr-2"></i> Sending...
-                      </>
-                    ) : (
-                      <>
-                        <i className="fas fa-paper-plane mr-2"></i> Send Message
-                      </>
-                    )}
-                  </Button>
-                </div>
-              </form>
-              
-              <p className="mt-6 text-sm text-neutral-lightest italic text-center">
-                Response time may vary depending on how interesting your data problem is!
+              <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
+              <p className="text-neutral mb-6">
+                Feel free to reach out through any of the contact methods above.
+              </p>
+              <p className="text-sm text-neutral-lightest italic">
+                I'm always open to discussing new projects and opportunities!
               </p>
             </motion.div>
           </motion.div>
