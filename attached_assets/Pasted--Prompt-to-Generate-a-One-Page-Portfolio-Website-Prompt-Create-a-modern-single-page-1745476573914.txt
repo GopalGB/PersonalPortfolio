@@ -1,0 +1,103 @@
+
+### ✅ Prompt to Generate a One-Page Portfolio Website:
+
+**Prompt:**
+
+> Create a modern, single-page personal portfolio website for **Neha Bagaswar**, a fresher-level Business & Data Analyst based in India, with a specialization in Marketing & Business Analytics.
+>
+> This website should include the following sections:
+>
+> ---
+>
+> ### 1. **Header / Hero Section**
+> - Name: Neha Bagaswar  
+> - Tagline: *Business & Data Analyst | Turning Raw Data into Actionable Insights*  
+> - Short Intro: *Helping businesses grow by transforming raw data into strategic insights.*  
+> - Button: [View Resume] (https://drive.google.com/file/d/1xomx_h9zxz4m5HHlhqfuzR94Ahzv_b5v/view?usp=sharing)
+>
+> ---
+>
+> ### 2. **About Me**
+> - Title: **About Me**
+> - Content:  
+> > Hi, I’m Neha Bagaswar, currently pursuing an MBA in Marketing & Business Analytics from Nagpur University. I’m passionate about solving problems using data, turning complex information into meaningful insights for business decision-making.
+> >
+> > My skillset spans data wrangling, visualization, and stakeholder-focused reporting using tools like Python (Pandas, NumPy, Seaborn), SQL (MySQL, Oracle), Power BI, and Tableau.
+> >
+> > I’ve worked on projects involving social media analytics, sales data trends, operational analysis, and dashboard development.
+> >
+> > I'm actively looking for opportunities in data analysis, business analysis, or digital strategy roles.
+>
+> ---
+>
+> ### 3. **Skills**
+> - Technical Skills:
+>   - Python (Pandas, NumPy, Matplotlib, Seaborn)  
+>   - SQL (MySQL, PL/SQL, Oracle SQL Developer)  
+>   - Power BI, Tableau, Excel  
+> - Soft Skills:
+>   - Analytical Thinking  
+>   - Problem Solving  
+>   - Presentation & Reporting  
+>   - Stakeholder Collaboration  
+>
+> ---
+>
+> ### 4. **Projects**
+> Display the following in a project card layout (title, description, skills used, GitHub link):
+>
+> #### 1. COVID-19 Data Insights  
+> - Description: Analyzed COVID-19 datasets using Python to uncover trends in infection, recovery, and fatality rates.  
+> - Skills: Python, Pandas, NumPy, Matplotlib, Seaborn  
+> - [GitHub Link](https://github.com/nehabagaswar/Covid-_19-_Data-Analysis_Python-project)
+>
+> #### 2. Food Delivery Operational Analytics  
+> - Description: Used advanced SQL to extract data, identify bottlenecks, and optimize delivery operations.  
+> - Skills: SQL (MySQL/PostgreSQL)  
+> - [GitHub Link](https://github.com/nehabagaswar/Food_Delivery_-Data-Analysis_Sql-project)
+>
+> #### 3. NYC Airbnb Market Insights  
+> - Description: Combined SQL and Python to segment market trends and rental pricing in NYC.  
+> - Skills: SQL, Python, Pandas, Seaborn  
+> - [GitHub Link](https://github.com/nehabagaswar/NYC_Airnub_Market_Analysis_python_project)
+>
+> #### 4. Sales Data Performance Analysis  
+> - Description: Evaluated seasonal sales and product performance with Python + SQL.  
+> - Skills: Python, SQL, Visualization  
+> - [GitHub Link](https://github.com/nehabagaswar/Sales_Data_Analysis_python-project)
+>
+> #### 5. Fundamental Data Analysis  
+> - Description: Cleaned and visualized datasets to practice core Python data skills.  
+> - Skills: Python, Pandas, NumPy, Seaborn  
+> - [GitHub Link](https://github.com/nehabagaswar/Data_Analysis_with_pyhton_using_Numpy-Pandas-Data-visualization)
+>
+> (Also mention Flavoro Campaign and Novatech Market Research if you want those, without links.)
+>
+> ---
+>
+> ### 5. **Experience**
+> **UI/UX & Digital Analytics Intern – Skill Guru Foundation (May 2023 – July 2023)**  
+> - Enhanced user interfaces based on feedback + data analytics.  
+> - Created performance reports for stakeholders.  
+> - Collaborated across design and marketing teams to implement changes.
+>
+> ---
+>
+> ### 6. **Education**
+> - **MBA in Marketing & Business Analytics** – Nagpur University (2023 – 2025)  
+>   - Activities: Business Analytics Club, Entrepreneurship Development Cell  
+> - **B.Sc. in Chemistry, Botany, Zoology** – Nagpur University (2019 – 2022)
+>
+> ---
+>
+> ### 7. **Contact**
+> - 📧 Email: [nehabagaswar28@gmail.com](mailto:nehabagaswar28@gmail.com)  
+> - 🌐 LinkedIn: [linkedin.com/in/neha-bagaswar](https://www.linkedin.com/in/neha-bagaswar)  
+> - 📍 Location: India  
+>
+> ---
+>
+> ### 8. **Footer**
+> - © 2025 Neha Bagaswar | Built with 💻 Data & Dedication
+
+---
