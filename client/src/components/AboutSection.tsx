@@ -1,18 +1,11 @@
 import { motion } from "framer-motion";
+import AnimatedSectionTitle from "./AnimatedSectionTitle";
 
 export default function AboutSection() {
   return (
     <section id="about" className="py-16 bg-white section-fade">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h2 
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl font-bold text-center mb-12 font-accent"
-        >
-          About Me
-        </motion.h2>
+        <AnimatedSectionTitle title="About Me" colorScheme="blue" />
         <div className="flex flex-col lg:flex-row items-center">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}

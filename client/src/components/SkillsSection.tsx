@@ -1,3 +1,5 @@
+import AnimatedSectionTitle from "./AnimatedSectionTitle";
+
 export default function SkillsSection() {
   const technicalSkills = [
     "Python", "Pandas", "NumPy", "Matplotlib", "Seaborn",
@@ -27,7 +29,7 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="py-16 bg-gray-50 section-fade">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 font-accent">Skills</h2>
+        <AnimatedSectionTitle title="Skills" colorScheme="teal" />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="bg-white rounded-xl shadow-md p-8">
             <h3 className="text-xl font-semibold mb-6 flex items-center">
