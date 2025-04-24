@@ -32,7 +32,7 @@ export default function HeroSection() {
                   1000,
                   'Actually, both...',
                   800,
-                  'Business & Data Analyst | Turning Raw Data into Actionable Insights',
+                  'Business & Data Analyst',
                   10000,
                 ]}
                 wrapper="h2"
@@ -48,7 +48,7 @@ export default function HeroSection() {
               transition={{ delay: 0.5, duration: 0.5 }}
               className="text-xl mb-8 text-neutral-light max-w-2xl mx-auto leading-relaxed"
             >
-              Helping businesses grow by transforming raw data into strategic insights. 
+              Helping businesses identify trends and opportunities through data analysis.
               <span className="italic text-primary"> (And yes, I actually understand what that means!)</span>
             </motion.p>
             <motion.div
