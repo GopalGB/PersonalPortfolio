@@ -42,13 +42,6 @@ export default function AnimatedNavBlocks() {
       textColor: "text-red-600"
     },
     { 
-      name: "Timeline", 
-      icon: "fas fa-history", 
-      color: "from-indigo-400 to-indigo-600",
-      hoverColor: "from-indigo-500 to-indigo-700",
-      textColor: "text-indigo-600"
-    },
-    { 
       name: "Contact", 
       icon: "fas fa-envelope", 
       color: "from-emerald-400 to-emerald-600",
