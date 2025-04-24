@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import AnimatedNavBlocks from "@/components/AnimatedNavBlocks";
 import AboutSection from "@/components/AboutSection";
 import SkillsSection from "@/components/SkillsSection";
 import ProjectsSection from "@/components/ProjectsSection";
@@ -37,6 +38,7 @@ export default function Home() {
     <div className="font-sans text-neutral bg-background">
       <Navbar />
       <HeroSection />
+      <AnimatedNavBlocks />
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
