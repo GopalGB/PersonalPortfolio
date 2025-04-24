@@ -2,122 +2,121 @@ import { scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 export default function Footer() {
+  const links = [
+    { name: "About", url: "about" },
+    { name: "Skills", url: "skills" },
+    { name: "Projects", url: "projects" },
+    { name: "Experience", url: "experience" },
+    { name: "Contact", url: "contact" }
+  ];
+  
+  const socialLinks = [
+    { 
+      icon: "fas fa-envelope", 
+      url: "mailto:nehabagaswar28@gmail.com", 
+      color: "#4DA8FF",
+      label: "Email"
+    },
+    { 
+      icon: "fab fa-linkedin-in", 
+      url: "https://www.linkedin.com/in/neha-bagaswar", 
+      color: "#0A66C2",
+      label: "LinkedIn"
+    },
+    { 
+      icon: "fab fa-github", 
+      url: "https://github.com/nehabagaswar", 
+      color: "#333333",
+      label: "GitHub" 
+    }
+  ];
+
   return (
-    <footer className="py-8 bg-neutral text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          <div className="text-center md:text-left">
-            <motion.h3 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-lg font-semibold mb-4"
-            >
-              Neha Bagaswar
-            </motion.h3>
-            <p className="text-neutral-lightest mb-2">Business & Data Analyst</p>
-            <p className="text-neutral-lightest text-sm italic">Turning numbers into narratives</p>
-          </div>
-          
-          <div className="text-center">
-            <motion.h3 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="text-lg font-semibold mb-4"
-            >
-              Quick Links
-            </motion.h3>
-            <div className="flex flex-col space-y-2">
-              {["About", "Skills", "Projects", "Experience", "Contact"].map((item, i) => (
-                <motion.button
-                  key={item}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 + i * 0.1 }}
-                  whileHover={{ x: 5 }}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-neutral-lightest hover:text-white transition-colors"
-                >
-                  {item}
-                </motion.button>
-              ))}
-            </div>
-          </div>
-          
-          <div className="text-center md:text-right">
-            <motion.h3 
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-lg font-semibold mb-4"
-            >
-              Connect
-            </motion.h3>
-            <div className="flex justify-center md:justify-end space-x-4">
-              <motion.a
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-                whileHover={{ y: -5, color: "#4DA8FF" }}
-                href="mailto:nehabagaswar28@gmail.com"
-                className="w-10 h-10 rounded-full bg-neutral-light/20 flex items-center justify-center text-white transition-colors"
-                aria-label="Email"
-              >
-                <i className="fas fa-envelope"></i>
-              </motion.a>
-              
-              <motion.a
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4, type: "spring", stiffness: 200 }}
-                whileHover={{ y: -5, color: "#0A66C2" }}
-                href="https://www.linkedin.com/in/neha-bagaswar"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-neutral-light/20 flex items-center justify-center text-white transition-colors"
-                aria-label="LinkedIn"
-              >
-                <i className="fab fa-linkedin-in"></i>
-              </motion.a>
-              
-              <motion.a
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
-                whileHover={{ y: -5, color: "#333333" }}
-                href="https://github.com/nehabagaswar"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-neutral-light/20 flex items-center justify-center text-white transition-colors"
-                aria-label="GitHub"
-              >
-                <i className="fab fa-github"></i>
-              </motion.a>
-            </div>
-          </div>
-        </div>
-        
+    <footer className="py-10 bg-gradient-to-br from-neutral to-neutral-dark text-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="border-t border-neutral-light/20 pt-6 flex flex-col md:flex-row justify-between items-center"
+          className="flex flex-col items-center"
         >
-          <div className="mb-4 md:mb-0 text-sm text-neutral-lightest">
-            <p>© 2025 Neha Bagaswar | Built with 💻 Data & Dedication <span className="italic">(and a touch of caffeine)</span></p>
+          {/* Logo/Name and Tagline */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="mb-6 text-center"
+          >
+            <h3 className="text-2xl font-bold mb-1">
+              <span className="text-primary">Neha</span> Bagaswar
+            </h3>
+            <p className="text-neutral-lightest text-sm">
+              Business & Data Analyst — <span className="italic">Turning numbers into narratives</span>
+            </p>
+          </motion.div>
+          
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            {links.map((link, i) => (
+              <motion.button
+                key={link.name}
+                whileHover={{ scale: 1.1, color: "#5FA8D3" }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                onClick={() => scrollToSection(link.url)}
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                {link.name}
+              </motion.button>
+            ))}
           </div>
+          
+          {/* Social Links */}
+          <div className="flex justify-center space-x-5 mb-8">
+            {socialLinks.map((social, i) => (
+              <motion.a
+                key={social.label}
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 + (i * 0.1) }}
+                whileHover={{ 
+                  y: -5, 
+                  backgroundColor: social.color,
+                  boxShadow: "0 4px 14px rgba(0, 0, 0, 0.2)" 
+                }}
+                href={social.url}
+                target={social.url.startsWith("mailto") ? "_self" : "_blank"}
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-neutral-light/30 flex items-center justify-center text-white transition-all duration-300"
+                aria-label={social.label}
+              >
+                <i className={social.icon}></i>
+              </motion.a>
+            ))}
+          </div>
+          
+          {/* Copyright */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center text-sm text-neutral-lightest border-t border-neutral-light/20 pt-6 w-full"
+          >
+            <p>© 2025 Neha Bagaswar • All Rights Reserved</p>
+            <p className="text-xs mt-1"><span className="text-primary">💼</span> Data-driven • Detail-oriented • Results-focused</p>
+          </motion.div>
+          
+          {/* Back to top */}
           <motion.button
-            whileHover={{ y: -3 }}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.4, type: "spring" }}
+            whileHover={{ y: -5, scale: 1.1 }}
             onClick={() => scrollToSection('hero')}
-            className="bg-primary hover:bg-primary/90 transition-colors h-10 w-10 rounded-full flex items-center justify-center shadow-md"
+            className="mt-6 bg-primary hover:bg-primary/90 transition-all h-10 w-10 rounded-full flex items-center justify-center shadow-lg"
             aria-label="Back to top"
           >
             <i className="fas fa-arrow-up text-white"></i>
