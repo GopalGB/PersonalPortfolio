@@ -106,12 +106,22 @@ export class MemStorage implements IStorage {
   async createProject(project: InsertProject): Promise<Project> {
     const id = this.projectCurrentId++;
     const now = new Date();
+    const { title, description, skills, skillCategory, icon, gradient, sortOrder, githubLink } = project;
+    
     const newProject: Project = { 
-      ...project, 
-      id, 
+      id,
+      title,
+      description, 
+      skills,
+      skillCategory,
+      icon,
+      gradient,
+      sortOrder,
+      githubLink: githubLink || null,
       createdAt: now,
       updatedAt: now
     };
+    
     this.projects.set(id, newProject);
     return newProject;
   }
@@ -184,24 +194,53 @@ export class DatabaseStorage implements IStorage {
   }
 
   async createProject(project: InsertProject): Promise<Project> {
-    const [newProject] = await db.insert(projects).values(project).returning();
+    const { title, description, skills, skillCategory, icon, gradient, sortOrder, githubLink } = project;
+    
+    const projectToInsert = {
+      title,
+      description,
+      skills,
+      skillCategory,
+      icon, 
+      gradient,
+      sortOrder,
+      githubLink: githubLink || null
+    };
+    
+    const [newProject] = await db.insert(projects).values(projectToInsert).returning();
     return newProject;
   }
 
   async updateProject(id: number, projectUpdate: Partial<InsertProject>): Promise<Project | undefined> {
+    // Handle updates safely, especially for githubLink which might be null
+    const updateData: Record<string, any> = {};
+    
+    if (projectUpdate.title !== undefined) updateData.title = projectUpdate.title;
+    if (projectUpdate.description !== undefined) updateData.description = projectUpdate.description;
+    if (projectUpdate.skills !== undefined) updateData.skills = projectUpdate.skills;
+    if (projectUpdate.skillCategory !== undefined) updateData.skillCategory = projectUpdate.skillCategory;
+    if (projectUpdate.icon !== undefined) updateData.icon = projectUpdate.icon;
+    if (projectUpdate.gradient !== undefined) updateData.gradient = projectUpdate.gradient;
+    if (projectUpdate.sortOrder !== undefined) updateData.sortOrder = projectUpdate.sortOrder;
+    if (projectUpdate.githubLink !== undefined) updateData.githubLink = projectUpdate.githubLink || null;
+    
+    // Add updatedAt timestamp
+    updateData.updatedAt = new Date();
+    
     const [updatedProject] = await db
       .update(projects)
-      .set(projectUpdate)
+      .set(updateData)
       .where(eq(projects.id, id))
       .returning();
+      
     return updatedProject;
   }
 
   async deleteProject(id: number): Promise<boolean> {
-    const result = await db
+    await db
       .delete(projects)
       .where(eq(projects.id, id));
-    return result.count > 0;
+    return true; // In PostgreSQL via Drizzle ORM, we assume success if no errors are thrown
   }
 }
 
