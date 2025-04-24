@@ -45,26 +45,86 @@ export default function AboutSection() {
               </motion.div>
             </div>
           </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-            className="w-full lg:w-3/5"
-          >
-            <p className="text-lg mb-4">
-              Hi, I'm Neha Bagaswar, currently pursuing an MBA in Marketing & Business Analytics from Nagpur University. I'm passionate about solving problems using data, turning complex information into meaningful insights for business decision-making.
-            </p>
-            <p className="text-lg mb-4">
-              My skillset spans data wrangling, visualization, and stakeholder-focused reporting using tools like Python (Pandas, NumPy, Seaborn), SQL (MySQL, Oracle), Power BI, and Tableau.
-            </p>
-            <p className="text-lg mb-4">
-              I've worked on projects involving social media analytics, sales data trends, operational analysis, and dashboard development.
-            </p>
-            <p className="text-lg font-medium">
-              I'm actively looking for opportunities in data analysis, business analysis, or digital strategy roles. <span className="italic text-primary text-sm">(Because turning Excel spreadsheets into actionable insights is my idea of fun!)</span>
-            </p>
-          </motion.div>
+          <div className="w-full lg:w-3/5">
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-lg mb-4 bg-gradient-to-r from-primary/10 to-transparent p-3 rounded-lg"
+            >
+              MBA student with a knack for <span className="text-primary font-medium">turning boring numbers into fascinating stories</span>. Yes, I'm that rare person who gets excited about spreadsheets! 🤓
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="mb-4 bg-gradient-to-r from-accent/10 to-transparent p-3 rounded-lg"
+            >
+              <p className="text-lg">
+                <motion.span
+                  initial={{ color: "#4a5568" }}
+                  whileInView={{ color: "#3b82f6" }}
+                  transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
+                  className="font-medium"
+                >
+                  Data wizard
+                </motion.span> with Python, SQL, Power BI & Tableau. <span className="italic">(I speak fluent 'Spreadsheet' and can translate it to human!)</span>
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-lg mb-4"
+            >
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                className="inline-block bg-emerald-100 text-emerald-800 px-2 py-1 rounded mr-1 mb-1"
+              >
+                Social Media Analytics
+              </motion.span>
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                className="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded mr-1 mb-1"
+              >
+                Sales Trends
+              </motion.span>
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                className="inline-block bg-purple-100 text-purple-800 px-2 py-1 rounded mr-1 mb-1"
+              >
+                Dashboards
+              </motion.span>
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                className="inline-block bg-amber-100 text-amber-800 px-2 py-1 rounded mb-1"
+              >
+                Operational Analysis
+              </motion.span>
+            </motion.div>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-lg font-medium bg-gradient-to-r from-primary/10 to-transparent p-3 rounded-lg"
+            >
+              Seeking roles in data analysis or digital strategy. <motion.span 
+                initial={{ opacity: 0.7 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
+                className="italic text-primary"
+              >
+                (Because I'm weirdly passionate about finding patterns in chaos!)
+              </motion.span>
+            </motion.p>
+          </div>
         </div>
       </div>
     </section>
