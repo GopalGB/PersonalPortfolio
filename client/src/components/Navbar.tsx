@@ -46,7 +46,7 @@ export default function Navbar() {
             </motion.a>
           </div>
           <div className="hidden md:flex items-center space-x-6">
-            {["about", "skills", "projects", "experience", "education", "contact"].map((item, i) => (
+            {["about", "skills", "projects", "experience", "education", "timeline", "contact"].map((item, i) => (
               <motion.a 
                 key={item}
                 initial={{ opacity: 0, y: -10 }}
